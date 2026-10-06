@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lafenis – Voorskou</title>
+<style>
+  :root {
+    --ink: #17303b;
+    --sea: #1d5c73;
+    --sand: #f3efe6;
+    --line: #d6dde0;
+    --slot: #e6eaec;
+    --wa: #128c4a;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px; line-height: 1.5; color: var(--ink); background: #fff;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid #e0a100; outline-offset: 2px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header { position: sticky; top: 0; z-index: 10; background: #fff; border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .brand { font-size: 22px; font-weight: 700; letter-spacing: .02em; text-decoration: none; color: var(--sea); }
+  .menu-btn {
+    font: inherit; font-weight: 600; background: none; border: 1px solid var(--ink);
+    border-radius: 4px; padding: 8px 14px; min-height: 44px; color: var(--ink); cursor: pointer;
+  }
+  nav { display: none; border-top: 1px solid var(--line); background: #fff; }
+  nav.open { display: block; }
+  nav a { display: block; padding: 14px 20px; text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--line); }
+
+  /* Photo slots */
+  .slot {
+    background: #d3e3e9; color: #2c4f5e; font-weight: 600;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: 16px; padding: 12px;
+  }
+  .slot small { display: block; font-weight: 400; font-size: 14px; margin-top: 2px; }
+  .hero-slot { aspect-ratio: 4 / 3; background: #c2dbe4; font-size: 18px; }
+
+  /* Hero text */
+  .hero { padding: 32px 0 38px; }
+  h1 { font-size: 32px; line-height: 1.15; margin-bottom: 10px; }
+  .sub { font-size: 19px; color: #3b5560; margin-bottom: 22px; }
+  .btn-wa {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--wa); color: #fff; text-decoration: none; font-weight: 700; font-size: 18px;
+    padding: 16px 20px; min-height: 56px; border-radius: 6px;
+  }
+
+  /* Units */
+  .units { background: var(--sand); padding: 32px 0 36px; }
+  h2 { font-size: 22px; margin-bottom: 16px; }
+  .unit { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-bottom: 18px; }
+  .unit .slot { aspect-ratio: 3 / 2; background: #e7dfcc; color: #433b27; }
+  .unit-body { padding: 14px 16px 16px; }
+  .unit h3 { font-size: 20px; margin-bottom: 6px; }
+  .unit .desc { color: #3b5560; margin-bottom: 10px; }
+  .unit .meta { font-weight: 700; margin-bottom: 2px; }
+  .unit .btn-wa { margin-top: 14px; font-size: 17px; }
+
+  /* Find us */
+  .find { padding: 32px 0; }
+  .find p { font-size: 18px; }
+
+  footer { background: var(--sea); color: #fff; padding: 24px 0 28px; font-size: 15px; }
+  footer p + p { margin-top: 6px; }
+  footer a { color: #fff; }
+
+  /* Wider screens: keep it a phone-width sketch */
+  @media (min-width: 700px) { body { background: #f6f7f8; } main, header, footer { background-clip: padding-box; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Lafenis</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Kieslys</button>
+  </div>
+  <nav id="menu" aria-label="Hoofkieslys">
+    <a href="#eenhede">Eenhede</a>
+    <a href="#vind-ons">Vind ons</a>
+    <a href="#kontak">Navraag per WhatsApp</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="slot hero-slot" role="img" aria-label="Plek vir hooffoto van Lafenis">Jou hoofoto hier<small>Foto van Lafenis kom hier</small></div>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Selfsorg-akkommodasie in Lambertsbaai</h1>
+      <p class="sub">Twee eenhede, bespreek direk</p>
+      <a class="btn-wa" id="kontak"
+         href="https://wa.me/27738399334?text=Hallo%2C%20ek%20wil%20graag%20navraag%20doen%20oor%20beskikbaarheid%20by%20Lafenis%20vir%20..."
+         target="_blank" rel="noopener">
+        Navraag per WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section class="units" id="eenhede">
+    <div class="wrap">
+      <h2>Die eenhede</h2>
+
+      <article class="unit">
+        <div class="slot" role="img" aria-label="Plek vir foto van Eenheid 1">Jou foto hier<small>Eenheid 1</small></div>
+        <div class="unit-body">
+          <h3>Eenheid 1</h3>
+          <p class="desc">Kort beskrywing van die eenheid kom hier</p>
+          <p class="meta">Slaap ?</p>
+          <p class="meta">Vanaf R ___</p>
+          <a class="btn-wa" href="https://wa.me/27738399334?text=Hallo%2C%20ek%20wil%20graag%20navraag%20doen%20oor%20Eenheid%201%20by%20Lafenis.%20Is%20dit%20beskikbaar%20van%20...%20tot%20...%3F" target="_blank" rel="noopener">Vra oor Eenheid 1</a>
+        </div>
+      </article>
+
+      <article class="unit">
+        <div class="slot" role="img" aria-label="Plek vir foto van Eenheid 2">Jou foto hier<small>Eenheid 2</small></div>
+        <div class="unit-body">
+          <h3>Eenheid 2</h3>
+          <p class="desc">Kort beskrywing van die eenheid kom hier</p>
+          <p class="meta">Slaap ?</p>
+          <p class="meta">Vanaf R ___</p>
+          <a class="btn-wa" href="https://wa.me/27738399334?text=Hallo%2C%20ek%20wil%20graag%20navraag%20doen%20oor%20Eenheid%202%20by%20Lafenis.%20Is%20dit%20beskikbaar%20van%20...%20tot%20...%3F" target="_blank" rel="noopener">Vra oor Eenheid 2</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="find" id="vind-ons">
+    <div class="wrap">
+      <h2>Vind ons</h2>
+      <p>Spence St, Lambert's Bay</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Voorskou gebou deur Percipio Digital</p>
+    <p><a href="https://wa.me/27738399334">073 839 9334</a> · <a href="mailto:percipiodigital@gmail.com">percipiodigital@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('menu');
+  function setMenu(open) {
+    menu.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Sluit' : 'Kieslys';
+  }
+  btn.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+  menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+</script>
+</body>
+</html>
